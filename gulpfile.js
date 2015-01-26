@@ -69,13 +69,17 @@ gulp.task('sass', function () {
         browsers: ['last 2 versions'],
         cascade: false,
         remove: true
-      }))
-    .pipe(g.sourcemaps.write());
+      }));
 
   if (DIST) {
     stream
       .pipe(g.rev())
-      .pipe(memRev());
+      .pipe(memRev())
+      .pipe(g.minifyCss());
+  } else {
+    stream
+      .pipe(g.sourcemaps.write())
+      .pipe(g.connect.reload());
   }
 
   return stream.pipe(gulp.dest(CURRENT_PATH + '/css/'));
@@ -94,9 +98,9 @@ gulp.task('browserify', ['lint'], function() {
 
   if (DIST) {
     stream
-      .pipe(g.uglify())
       .pipe(g.rev())
-      .pipe(memRev());
+      .pipe(memRev())
+      .pipe(g.uglify());
   }
 
   stream.pipe(gulp.dest(CURRENT_PATH + '/js/'));
