@@ -15,6 +15,7 @@
 	- `dist`: public webserver
 	- `vendor`: composer stuff
 
+# structure
 
 ```
 	sass/
