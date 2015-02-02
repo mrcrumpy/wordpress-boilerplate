@@ -93,7 +93,10 @@ gulp.task('sass', function () {
     .pipe(g.plumber({errorHandler: g.notify.onError('Sass: <%= error.message %>')}))
     .pipe(g.sourcemaps.init())
     .pipe(g.sass({
-      includePaths: './bower_components'
+      includePaths: [
+        './bower_components',
+        './node_modules'
+      ]
     }))
      // will probably break sourcemaps?
     .pipe(g.autoprefixer({
