@@ -1,20 +1,19 @@
 # setup vagrant
 
-- default values in puphpet/config.yaml are: 192.168.56.112  local.app
+- default values in puphpet/config.yaml are: `192.168.56.112  local.app`
 - apache serves `dist` directory
 
 # serve
 
-- gulp
-- gulp dist
+- `gulp` (watch with livereload)
+- `gulp dist` (dist with rev and min)
 
 # deployment
 
 - create 3 artifacts:
-	- Acme: your own PHP code
-	- dist: public dist
-	- vendor: composer stuff
-
+	- `Acme`: your own PHP code
+	- `dist`: public webserver
+	- `vendor`: composer stuff
 
 
 ```
