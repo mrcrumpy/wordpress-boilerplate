@@ -1,3 +1,22 @@
+# setup vagrant
+
+- default values in puphpet/config.yaml are: 192.168.56.112  local.app
+- apache serves `dist` directory
+
+# serve
+
+- gulp
+- gulp dist
+
+# deployment
+
+- create 3 artifacts:
+	- Acme: your own PHP code
+	- dist: public dist
+	- vendor: composer stuff
+
+
+
 ```
 	sass/
 	|
