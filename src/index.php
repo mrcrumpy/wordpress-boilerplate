@@ -7,16 +7,20 @@ use Silex\Application;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
+// use Acme\MyClass;
+// $myClass = new MyClass();
+
 $app = new Application();
 
 $env = getenv('APP_ENV') ? : 'prod';
 define('APP_ENV', $env);
 
+// TODO: read from config or make dependent on ENV
+$app['debug'] = true;
+
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), [
    'http_cache.cache_dir' => __DIR__ . '/http_cache/'
 ]);
-
-$app->register(new Silex\Provider\SessionServiceProvider());
 
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile' => __DIR__.'/logging.log',
@@ -33,7 +37,6 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 $app['twig']->addExtension(new Twig_Extension_Debug());
-
 
 $addCacheMiddleware = function (Request $request, Response $response, Application $app) {
     return $response->setCache(['s_maxage' => 3600]);
@@ -69,14 +72,14 @@ $app->error(function (\Exception $e, $code) use ($app)
             $message = 'Something went wrong.';
     }
 
-    // if ($app['debug']) {
+    if ($app['debug']) {
         echo "<pre>";
         echo $e;
         echo "</pre>";
-    // } else {
+    } else {
         $app['logger']->addError(sprintf("%s: %s: %d", $code, $message, $e));
-        // return $app['twig']->render('layouts/404.twig', ['code' => $code, 'message' => $message]);
-    // }
+        return $app['twig']->render('layouts/404.twig', ['code' => $code, 'message' => $message]);
+    }
 
 });
 
