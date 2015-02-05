@@ -5,7 +5,8 @@
         "twig/twig": ">=1.8,<2.0-dev",
         "twig/extensions": "*",
         "symfony/twig-bridge": "~2.5",
-        "monolog/monolog": ">=1.0.0"
+        "monolog/monolog": ">=1.0.0",
+        "igorw/config-service-provider": "~1.2"
     },
     "autoload" : {
         "psr-4" : {
