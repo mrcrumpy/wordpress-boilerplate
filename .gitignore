@@ -7,3 +7,5 @@ dist
 /default/
 .vagrant
 composer.lock
+docker/log
+docker/mysql
