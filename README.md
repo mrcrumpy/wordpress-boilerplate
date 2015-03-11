@@ -5,6 +5,10 @@
 ...
 TODO
 
+https://code.tutsplus.com/courses/wordpress-hackers-guide-to-the-galaxy/lessons/take-control-of-your-environment
+https://github.com/markjaquith/WordPress-Skeleton
+
+
 # serve
 
 - `gulp` (watch with livereload)
