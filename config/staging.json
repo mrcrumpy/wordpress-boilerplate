@@ -1,7 +1,0 @@
-{
-    "debug" : true,
-    "db_host" : "localhost" ,
-    "db_name" : "mydatabase",
-    "db_user" : "dbuser",
-    "db_pass" : "123"
-}

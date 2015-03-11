@@ -1,11 +1,6 @@
 node_modules
 bower_components
 .tmp
-dist
 /vendor/
-/html/
-/default/
-.vagrant
-composer.lock
-docker/log
-docker/mysql
+docker-compose/log
+docker-compose/data
