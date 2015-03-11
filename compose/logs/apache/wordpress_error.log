@@ -1,2 +1,0 @@
-[Wed Mar 11 14:33:57.665131 2015] [proxy_fcgi:error] [pid 59:tid 140053149832960] [client 192.168.59.3:56427] AH01071: Got error 'Primary script unknown\n'
-[Wed Mar 11 14:34:10.925690 2015] [proxy_fcgi:error] [pid 59:tid 140053133047552] [client 192.168.59.3:56422] AH01071: Got error 'Primary script unknown\n'

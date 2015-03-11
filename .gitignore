@@ -2,5 +2,5 @@ node_modules
 bower_components
 .tmp
 /vendor/
-docker-compose/log
-docker-compose/data
+compose/logs
+compose/data

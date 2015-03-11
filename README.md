@@ -1,5 +1,9 @@
 
-- apache serves `wordpress` directory
+- apache serves `wordpress/public` directory
+
+- ./sql/create_database.sh
+...
+TODO
 
 # serve
 
