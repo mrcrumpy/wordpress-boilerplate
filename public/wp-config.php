@@ -47,9 +47,9 @@ switch (APP_ENV) {
         break;
 }
 
-define('WP_SITE_URL', WP_HOME . '/wp/');
+define('WP_SITE_URL', WP_HOME . '/wp');
 
-define( 'WP_CONTENT_DIR', APP_ROOT . '/content' );
+define( 'WP_CONTENT_DIR', APP_ROOT . '/public/content' );
 define( 'WP_CONTENT_URL', WP_HOME . '/content' );
 
 
