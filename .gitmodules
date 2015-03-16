@@ -1,3 +1,6 @@
 [submodule "public/wp"]
 	path = public/wp
 	url = https://github.com/WordPress/WordPress.git
+[submodule "src/sage"]
+	path = src/sage
+	url = https://github.com/roots/sage.git
