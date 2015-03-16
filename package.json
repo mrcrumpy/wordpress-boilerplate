@@ -2,8 +2,7 @@
   "name": "wordpress-boilerplate",
   "version": "0.0.1",
   "description": "",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Christian Maniewski <chmanie@fastmail.com>",
   "license": "MIT",
   "devDependencies": {

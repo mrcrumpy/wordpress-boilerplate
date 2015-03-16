@@ -8,8 +8,6 @@ var TMP_PATH = DIST_PATH;
 var gulp = require('gulp');
 var g = require('gulp-load-plugins')();
 
-var rename = require('gulp-rename');
-
 var runSequence = require('run-sequence');
 var memRev = require('./utils/gulp-memrev');
 var del = require('del');
