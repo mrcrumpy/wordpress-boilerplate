@@ -7,8 +7,8 @@ putenv('DB_USER=admin');
 putenv('DB_PASSWORD=123');
 putenv('DB_HOST=db');
 
-putenv('WP_SITEURL=http://wordpress.app');
-putenv('WP_HOME=http://wordpress.app/wp');
+putenv('WP_SITEURL=http://wordpress.app/wp');
+putenv('WP_HOME=http://wordpress.app');
 
 putenv('AUTH_KEY=yz+q59(}TjZ*gUWjc/eOw+1w_}#pv55KZZ-Uk!e-w`U7QD|ENzqu+n#be+@0|@90');
 putenv('SECURE_AUTH_KEY=s@_7yq|y:-~o!s_pRdmS:U{@.KGv:.JfY)|Ag6=^B<B+-h7J<t$Hw!3Db%btq]?H');

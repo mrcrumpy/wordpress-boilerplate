@@ -1,6 +1,6 @@
 <?php
 
-require_once '../.env.config.php';
+require_once dirname(__DIR__) . '/.env.config.php';
 
 $root_dir = dirname(__DIR__);
 $webroot_dir = $root_dir . '/public';
