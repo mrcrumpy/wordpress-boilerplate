@@ -1,5 +1,11 @@
 <?php
 
+/*
+    Example config
+    rename to .env.config.php
+    create on each server manually (not to be deployed)
+*/
+
 putenv('APP_ENV=local');
 
 putenv('DB_NAME=wp_wordpress');
