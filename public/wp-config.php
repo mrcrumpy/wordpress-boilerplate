@@ -14,7 +14,7 @@
  * @package WordPress
  */
 
-require_once '.env.config.php';
+require_once(dirname(__DIR__) . '/.env.config.php');
 
 define('APP_ENV', getenv('APP_ENV') ?: 'local' );
 define('APP_ROOT', dirname(__DIR__));
@@ -47,7 +47,7 @@ switch (APP_ENV) {
         break;
 }
 
-define('WP_SITE_URL', WP_HOME . '/wp');
+define('WP_SITEURL', WP_HOME . '/wp');
 
 define( 'WP_CONTENT_DIR', APP_ROOT . '/public/content' );
 define( 'WP_CONTENT_URL', WP_HOME . '/content' );
