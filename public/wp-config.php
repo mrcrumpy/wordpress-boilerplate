@@ -85,7 +85,7 @@ $table_prefix  = 'wp_';
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-     define('ABSPATH', dirname(__FILE__) . '/wp/');
+     define('ABSPATH', dirname(__FILE__) );
 
 // if ( !defined('ABSPATH') )
 //     define('ABSPATH', dirname(__FILE__) . '/wp/');
