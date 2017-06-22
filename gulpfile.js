@@ -18,9 +18,7 @@ var DIST = false;
 var CURRENT_PATH = TMP_PATH;
 
 
-gulp.task('clean', function (done) {
-  del([TMP_PATH, DIST_PATH], done);
-});
+gulp.task('clean', () => { del([TMP_PATH, DIST_PATH], {dot: true}); });
 
 gulp.task('views', function () {
   var stream = gulp.src([
@@ -120,7 +118,7 @@ gulp.task('watchfiles', function () {
 
 gulp.task('watch', function (done) {
   g.livereload.listen();
-  runSequence('clean', 'lint', [ 'browserify' ,'sass', 'assets', 'images'], 'views', 'watchfiles', done);
+  runSequence('clean', 'lint', [ 'browserify' ,'sass', 'assets', 'images', 'views'], 'watchfiles', done);
 });
 
 gulp.task('lint', function () {
@@ -142,7 +140,7 @@ gulp.task('test', function (done) {
 gulp.task('dist', function (done) {
   DIST = true;
   CURRENT_PATH = DIST_PATH;
-  runSequence('clean', 'lint', [ 'browserify', 'sass', 'images', 'assets'], 'views', done); 
+  runSequence('clean', 'lint', [ 'browserify', 'sass', 'images', 'assets', 'views'], done); 
 });
 
 gulp.task('default', ['watch']);
