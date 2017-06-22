@@ -3,6 +3,9 @@
 - `git clone --recursive [git-url]`
 - `docker-compose up -d` (maybe has to be executed 2 times because of init)
 - `./sql/create_database.sh sql/[newest_sql_dump].sql`
+    - without sql dump:
+        - rename public/wp-config.php and go through WP install process
+        - after installation change filename back to wp-config.php and remove public/wp/wp-config.php
 - `npm install`
 - `gulp dist` (creates theme for the first time)
 
