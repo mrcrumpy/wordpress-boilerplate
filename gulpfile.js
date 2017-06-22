@@ -57,13 +57,7 @@ gulp.task('assets', function () {
 gulp.task('sass', function () {
   var stream = gulp.src(SRC_PATH + '/sass/style.scss')
     .pipe(g.plumber({errorHandler: g.notify.onError('Sass: <%= error.message %>')}))
-    .pipe(g.sourcemaps.init())
-    .pipe(g.sass({
-      includePaths: [
-        './bower_components',
-        './node_modules'
-      ]
-    }))
+    .pipe(g.sass.sync().on('error', g.sass.logError))
     .pipe(g.autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false,
