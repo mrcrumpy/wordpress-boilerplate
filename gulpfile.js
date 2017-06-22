@@ -9,7 +9,6 @@ var gulp = require('gulp');
 var g = require('gulp-load-plugins')();
 
 var runSequence = require('run-sequence');
-var memRev = require('./utils/gulp-memrev');
 var del = require('del');
 var to5ify = require('babelify');
 var karma = require('karma');
